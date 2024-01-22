@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+   color: white;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  perspective: 800px;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+} 
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+
+#navbar {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  gap: 50px;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 99;
+}
+
+#navbar img {
+  height: 60px;
+}
+
+#navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#navbar h4 {
+  font-weight: 500;
+}
+
+#navbar h4:hover {
+  color: #8c9bab;
+  cursor: pointer;
+  transition: 0.5s ease-in-out; 
+  opacity: 1;
+}
+
+#navbar h4:not(:hover) {
+  color: #ffffff; 
+  opacity: 1; 
+  transition: 0.5s;
+}
+
+#navbar h4::after{
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0;
+  transition: all 0.9s;
+  pointer-events: none;
+}
+
+#navbar h4:hover::after{
+  opacity: 0.5;
+}
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, #26425a, #0a1011);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background-image: linear-gradient(180deg, #0a1011, #071d33);
+  backdrop-filter: blur(20px); 
+  width: 100%;
+  z-index: 99;
+}
+
+#navbar img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#navbar a{
+  position: relative;
+  text-decoration: none;
+}
+
+
+#main img{
+  position: absolute;
+  height:700px;
+  padding-left: 200px;
+  padding-top: 100px;
+  overflow: hidden;
+  object-fit: cover;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 99;
+}
+
+
+#blob{
+  display: flex;
+  padding-left: calc((100vw - 800px) / 2);
+  padding-top: calc((100vh - 1000px) / 2); 
+  margin-left: auto; 
+  padding-right: 700px;
+  overflow: hidden;
+  z-index: 98; 
+  box-shadow: 5 6 black;
+}
+
+
+
+section {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+#page1{
+  background: linear-gradient(180deg, #0d1f23, #26425a);
+  z-index: -1;
+}
+
+#page2{
+  background: linear-gradient(180deg, #0a1011, #0a1011);
+  z-index: -1;
+}
+
+#page3{
+  background: linear-gradient(180deg, #0a1011, #071d33);
+  z-index: -1;
+} 
+
+
